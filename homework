@@ -1,0 +1,36 @@
+package com.medipol.homework;
+
+import java.util.Scanner;
+
+public class IkinciDerecedenBirDenkleminKokleri{
+
+	public static void main(String[] args) {
+		
+		Scanner giris=new Scanner(System.in);
+        double a,b,c;
+        double delta,x1,x2;
+        System.out.println("İkinci dereceden denklemin köklerini bulma");
+        System.out.println("ax^2+bx+c=0\n");
+        System.out.print("a değerini girin=");
+        a= giris.nextInt();
+        System.out.print("b değerini girin=");
+        b= giris.nextInt();
+        System.out.print("c değerini girin=");
+        c= giris.nextInt();
+        delta=b*b-4*a*c;
+        if (delta < 0){
+        System.out.println("Delta < 0 Kök yoktur.");
+        } else if(delta == 0) {
+            x1=(-b+Math.sqrt(delta)/10)/2*a;
+        System.out.println("Delta = 0 ve 2 eşit kök vardır="+x1);
+        } else if(delta > 0){
+            x1=(-b+Math.sqrt(delta)/10)/2*a;
+            x2=(-b-Math.sqrt(delta)/10)/2*a;
+        System.out.println("Delta > 0 ve 2 farklı kök vardır");
+        System.out.println("x1= "+x1+"  x2="+x2);
+    
+        }
+        
+        }
+
+	}
